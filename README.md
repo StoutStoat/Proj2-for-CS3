@@ -1,2 +1,3 @@
 # Proj2
-BALATRO BUT SHITTIER!!1!
+Blackjack but like worse.
+For Computer Science 3 project :3
