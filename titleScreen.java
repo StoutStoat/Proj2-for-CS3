@@ -6,9 +6,9 @@ public class titleScreen extends World
     {
         //this is to set up the base of the title screen
         //setBackground(/* image goes here */);
-        showText("Black Jack", /* num */, /* num */, /* color */);
-        showText("Press 'Y' to Play", /* num */, /* num */, /* color */);
-        showText("Press 'N' to Quit", /* num */, /* num */, /* color */);
+        //showText("Black Jack", /* num */, /* num */, /* color */);
+        //showText("Press 'Y' to Play", /* num */, /* num */, /* color */);
+        //showText("Press 'N' to Quit", /* num */, /* num */, /* color */);
 
         // ^^ need coordinates for the title screen text.
     }

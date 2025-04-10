@@ -13,7 +13,7 @@ public class gameBoard extends World
     public int enemyCardPosY = 0;
     public gameBoard()
     {
-        setBackground(/* background image goes here*/);
+        //setBackground(/* background image goes here*/);
 
     }
 
