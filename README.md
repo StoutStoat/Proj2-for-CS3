@@ -7,4 +7,4 @@ https://drive.google.com/drive/folders/1w_ojUgOA5_Re-pXoDlCjWSRbjXLAIayt
 
 Install Visual Studio Code & relavent github extensions ofc
 
-LiveShare Link ; https://prod.liveshare.vsengsaas.visualstudio.com/join?C10A37DB3023621C93EEE00496BCECF04E88
+LiveShare Link ; https://prod.liveshare.vsengsaas.visualstudio.com/join?F0543F2FF26FA1673313BE4F02C7177FFC20
