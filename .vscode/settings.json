@@ -3,5 +3,4 @@
         "lib/**/*.jar",
         "mayflower3.3.7.jar"
     ],
-    "java.dependency.packagePresentation": "hierarchical"
 }

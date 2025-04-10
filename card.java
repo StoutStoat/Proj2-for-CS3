@@ -5,11 +5,11 @@ public class card {
     private String value;
 
 
-    public Card(String suit, String value){
+    public card(String suit, String value){
         this.suit = suit;
         this.value = value;
     }
-    public Card(){}
+    public card(){}
     public String getSuit(){
         return suit;
     }

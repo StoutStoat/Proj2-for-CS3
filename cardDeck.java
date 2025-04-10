@@ -7,16 +7,16 @@
 import java.util.*;
 
 public class cardDeck {
-    ArrayList<Card> cards = new ArrayList<Card>();
+    ArrayList<card> cards = new ArrayList<card>();
 
     String[] values = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
-    String[] suit = {"Club", "Spade", "Diamond", "Heart"};
+    String[] suit = {"Clubs", "Spades", "Diamonds", "Hearts"};
 
     static boolean firstThread = true;
     public cardDeck(){
         for (int i = 0; i<suit.length; i++) {
             for(int j=0; j<values.length; j++){
-                this.cards.add(new Card(suit[i],values[j]));
+                this.cards.add(new card(suit[i],values[j]));
             }
         }
         //shuffle the deck when its created
@@ -24,7 +24,7 @@ public class cardDeck {
 
     }
 
-    public ArrayList<Card> getDeck(){
+    public ArrayList<card> getDeck(){
         return cards;
     }
 
