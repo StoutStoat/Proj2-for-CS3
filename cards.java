@@ -3,50 +3,53 @@
  * 
  * This class handles all 52 cards. 
  */
-import java.util.LinkedList;
 
 public class cards {
-
-    LinkedList<String> cardDeck;
-
-    public cards()
-    {
-    //initialize deckMap
-        LinkedList<String> cardDeck = new LinkedList<String>();
-    }
-
-    public void createDeck()
-    {
-        //4 suites, 10 numbers. Jack, Queen & King
-        for (int i = 1; i < 5; i++)
-        {
-            for (int j = 1; j < 14; j++)
-            {
-                //cardDeck.add();
-                cardDeck.add();
-            }
-        } 
-        //then assign value
-        assignValue();
-    }
-
-    /**
-     * Assigns a value from 1 to 13 depending on the card.
-     * Ace (1) to King (13)
-     */
-    private void assignValue()
-    {
+    public static void main(String[] args) {
         
-    };
-    
-    /**
-     * returns value of card.
-     * @return
-     */
-    public int returnValue()
-    {
-        return 0;
-    };
+        int[] cardDeck = new int[52];
+        String value[] = {"Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
+        String suit[] = {"Hearts", "Diamonds", "Spades", "Clubs"};
 
+        public void createDeck()
+        {
+            //4 suites, 10 numbers. Jack, Queen & King
+            for (int i = 0; i < cardDeck.length; i++)
+            {
+                cardDeck[i] = i;
+            } 
+            
+        }
+    
+        public void shuffleDeck()
+        {
+            //Shuffles the deck
+            for (int i = 0; i < cardDeck.length; i++)
+            {
+                int index = (int)(Math.random*53);
+                int temp = cardDeck[i];
+                cardDeck[i] = cardDeck[index];
+                cardDeck[index] = temp;
+            } 
+        }
+
+        /**
+        * Assigns a value from 1 to 13 depending on the card.
+        * Ace (1) to King (13)
+        */
+        private void assignValue()
+        {
+        
+        };
+    
+        /**
+        * returns value of card.
+        * @return
+        */
+        public int returnValue()
+        {
+            return 0;
+        };
+        }
 }
 
