@@ -12,17 +12,18 @@ public class cards {
     public cards()
     {
     //initialize deckMap
-        cardDeck = new LinkedList<String>();
+        LinkedList<String> cardDeck = new LinkedList<String>();
     }
 
     public void createDeck()
     {
-        //4 suites, 13 numbers. Jack, Queen & King
+        //4 suites, 10 numbers. Jack, Queen & King
         for (int i = 1; i < 5; i++)
         {
             for (int j = 1; j < 14; j++)
             {
                 //cardDeck.add();
+                cardDeck.add();
             }
         } 
         //then assign value
@@ -35,7 +36,7 @@ public class cards {
      */
     private void assignValue()
     {
-
+        
     };
     
     /**
