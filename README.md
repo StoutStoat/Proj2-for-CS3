@@ -6,3 +6,5 @@ Mayflower Documentation:
 https://drive.google.com/drive/folders/1w_ojUgOA5_Re-pXoDlCjWSRbjXLAIayt 
 
 Install Visual Studio Code & relavent github extensions ofc
+
+LiveShare Link ; https://prod.liveshare.vsengsaas.visualstudio.com/join?72677FBBB4BC6CF7E49F3E9885E1B4A61228
