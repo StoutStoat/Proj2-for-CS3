@@ -22,7 +22,7 @@ public class cards {
         {
             for (int j = 1; j < 14; j++)
             {
-                cardDeck.add(i);
+                //cardDeck.add();
             }
         } 
         //then assign value
