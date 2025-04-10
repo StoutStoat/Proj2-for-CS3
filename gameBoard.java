@@ -20,6 +20,6 @@ public class gameBoard extends World
     public void act()
     {
         //get to the win and lose screens/ game over high score
-        // gameplay will probably nee dt 
+        // gameplay will probably need
     }
 }
