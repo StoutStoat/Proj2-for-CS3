@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "gameRunner",
+            "request": "launch",
+            "mainClass": "gameRunner",
+            "projectName": "Proj2-for-CS3_eb4451d4"
+        },
+        {
             "type": "jdk",
             "request": "launch",
             "name": "Launch Java App"

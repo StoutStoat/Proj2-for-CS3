@@ -1,4 +1,4 @@
-public class card {
+class card {
     private String suit;
     private String value;
 
