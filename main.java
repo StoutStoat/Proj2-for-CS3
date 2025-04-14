@@ -4,10 +4,10 @@
  */
 import mayflower.Mayflower;
 
-public class main extends Mayflower{
+public class main extends Mayflower
+{
     public main()
     {
         
     }
-
 }

@@ -1,5 +1,6 @@
 public class gameRunner {
-    public static void main(String[] args){
-        new main();
+        public static void main(String[] args)
+    {
+        new TheNewWorld();
     }
 }

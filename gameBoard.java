@@ -22,4 +22,9 @@ public class gameBoard extends World
         //get to the win and lose screens/ game over high score
         // gameplay will probably need
     }
+
+    public void results()
+    {
+        
+    }
 }

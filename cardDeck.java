@@ -8,32 +8,44 @@ import java.util.*;
 
 public class cardDeck {
     //replace with set list
-    ArrayList<card> cards = new ArrayList<card>();
+    Map<Integer, card> cards = new Hashmap<>();
 
     String[] values = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
     String[] suit = {"Clubs", "Spades", "Diamonds", "Hearts"};
 
     static boolean firstThread = true;
     public cardDeck(){
-        for (int i = 0; i<suit.length; i++) {
-            for(int j=0; j<values.length; j++){
-                this.cards.add(new card(suit[i],values[j]));
+        int index = 0;
+        for (String suit : suits) {
+            for (String value : values) {
+                cards.put(index++, new card(suit, value));
             }
         }
         //shuffle the deck when its created
-        Collections.shuffle(this.cards);
+        shuffleDeck();
 
     }
 
-    public ArrayList<card> getDeck(){
+    public void shuffleDeck() {
+        List<Integer> keys = new ArrayList<>(cards.keySet());
+        Collections.shuffle(keys);
+        Map<Integer, card> shuffledDeck = new LinkedHashMap<>();
+        for (int key : keys) {
+            shuffledDeck.put(key, cards.get(key));
+        }
+        cards = shuffledDeck;
+    }
+    
+    ppublic Map<Integer, card> getDeck() {
         return cards;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         cardDeck deck = new cardDeck();
 
-        //print out the deck.
-        System.out.println(deck.getDeck());
+        // Print out the deck
+        for (Map.Entry<Integer, card> entry : deck.getDeck().entrySet()) {
+            System.out.println("Key: " + entry.getKey() + ", Card: " + entry.getValue());
+        }
     }
-
 }
