@@ -21,12 +21,12 @@ public class titleScreen extends World
         // this will start the game and load up the gameplay screen
         if(Mayflower.isKeyDown(Keyboard.KEY_Y))
         {
-            //Mayflower.setWorld(/*gameplay level*/)
+            Mayflower.setWorld(new gameBoard());
         }
         // this will exit the home screen and the entire game
         else if(Mayflower.isKeyDown(Keyboard.KEY_N))
         {
-            System.exit();
+            //System.exit();
         }
     }
 }
