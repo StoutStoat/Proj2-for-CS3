@@ -25,11 +25,16 @@ public class cardDeck {
             diamonds.add(new card("Diamonds", value));
             hearts.add(new card("Hearts", value));
         }
-
-        //shuffle the deck when its created, you have to convert it to a list temporariliy
-        shuffleDeck();
-
     }
+    //shuffle the deck when its created, you have to convert it to a list temporarily
+    private void shuffleDeck() {
+    	for (String shape : suit)
+    	
+    }
+   
+    
+        
+    
     /*
      * 
      * @param suit   what list of suit to return.
