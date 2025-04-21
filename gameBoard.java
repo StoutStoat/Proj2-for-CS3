@@ -1,5 +1,7 @@
-/*
-    created on (4/10/2025)
+/**
+    Created on (4/10/2025)
+    Creates the game board
+    Will switch to win or lose screens if conditions are met.
 */
 import mayflower.*;
 

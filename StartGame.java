@@ -5,8 +5,8 @@
  */
 import mayflower.*;
 
-public class MenuButton extends Actor{
-	public MenuButton()
+public class StartGame extends Actor{
+	public StartGame()
 	{
 		setImage("images/1.png");
 	}

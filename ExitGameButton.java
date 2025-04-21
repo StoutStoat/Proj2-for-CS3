@@ -5,10 +5,10 @@
  */
 import mayflower.*;
 
-public class MenuButton extends Actor{
-	public MenuButton()
+public class ExitGameButton extends Actor{
+	public ExitGameButton()
 	{
-		setImage("images/1.png");
+		setImage("images/2.png");
 	}
 	public void act() 
 	{

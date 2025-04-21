@@ -1,4 +1,4 @@
-/*
+/**
  * This should handle the UI & practical elements of the cards
  * I.E : the 'hover' effect & adjusting image depending on suit & number
  * 
