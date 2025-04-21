@@ -1,10 +1,10 @@
-/**
-    Created on (4/10/2025)
-    Creates the game board
-    Will switch to win or lose screens if conditions are met.
-*/
 import mayflower.*;
 
+/**
+Created: 4/10/2025 (DD/MM/YYYY)
+Creates the game board
+Will switch to win or lose screens if conditions are met.
+*/
 public class gameBoard extends World
 {
     public int playersHandPosX = 0;

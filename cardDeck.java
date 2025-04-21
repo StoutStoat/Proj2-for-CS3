@@ -13,11 +13,27 @@ import java.util.*;
  * The draw will be in a FILO (First in last out) system.
  * </pre>
  */
+
+//Interfaces from our labs will help here.
 public class cardDeck
 {
+	
+	//Every card has 3 properties. Number, Suit, and the Image
+	//A listmap will be used. Keys will be suits and values will be numbers.
+	
+	
     public cardDeck()
     {
+
+    }
+    
+    /**
+     * Creates a new deck and shuffle it. 
+     */
+    public void createDeck()
+    {
     	
+    	shuffle();
     }
     
     /**
@@ -34,14 +50,18 @@ public class cardDeck
      * This will not return drawn cards into the deck. 
      */
     public void shuffle()
-    {}
+    {
+    	
+    }
     
     /**
      * Will draw the top card from the deck and return it. 
      * This also means it will remove said-card from the deck.
      */
     public void draw()
-    {}
+    {
+    	
+    }
     
     /**
      * Will put any card back in a desired spot in the deck. 

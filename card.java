@@ -1,10 +1,10 @@
-/**
- * This should handle the UI & practical elements of the cards
- * I.E : the 'hover' effect & adjusting image depending on suit & number
- * 
- */
 import mayflower.*;
 
+/**
+ * 
+ * This class should handle the UI & practical elements of the cards
+ * I.E : the 'hover' effect & adjusting image depending on suit & number
+ */
 class card extends Actor {
 //    private String suit;
 //    private String value;
