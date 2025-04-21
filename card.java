@@ -5,24 +5,13 @@ import mayflower.*;
  * This class should handle the UI & practical elements of the cards
  * I.E : the 'hover' effect & adjusting image depending on suit & number
  */
-class card extends Actor {
-//    private String suit;
-//    private String value;
-//
-//    public card(String suit, String value) {
-//        this.suit = suit;
-//        this.value = value;
-//    }
-
-	/*
-	 * Set image depending on suit & number
-	 */
-	public card() 
+public class card
+{
+	public card(int s, int n)
 	{
 		
+		
 	}
-    public void act()
-    {
-    	
-    }
 }
+
+
