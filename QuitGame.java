@@ -5,15 +5,13 @@ import mayflower.*;
  * A simple actor to serve as a button.
  * 
  */
-public class ExitGameButton extends Actor{
-	public ExitGameButton()
+public class QuitGame extends Actor{
+	public QuitGame()
 	{
-		setImage("images/2.png");
-		
+		setImage("images/9.png");
 	}
 	public void act() 
 	{
-		
-		
+
 	}
 }

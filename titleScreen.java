@@ -12,16 +12,14 @@ public class titleScreen extends World
         showText("Black Jack", 200, 200, Color.BLACK);
         showText("Press 'Y' to Play", 400, 400, Color.BLACK);
         showText("Press 'N' to Quit", 600, 600, Color.BLACK);
-        addObject(menu, 400, 300);
-        addObject(exit, 500, 300);
+        addObject(menu, 1, 200);
+        addObject(exit, 1000, 200);
         // ^^ need coordinates for the title screen text.
     }
 
     public void act()
-    {
+    {     
         //setting the world first thing
-        Mayflower.setWorld(new titleScreen());
-
         // this will start the game and load up the gameplay screen
 		if (Mayflower.mousePressed(menu) == true)
 		{	
