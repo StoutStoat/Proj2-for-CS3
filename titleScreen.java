@@ -8,13 +8,12 @@ public class titleScreen extends World
     public titleScreen()
     {
         //this is to set up the base of the title screen
-        //setBackground(/* image goes here */);
-        showText("Black Jack", 200, 200, Color.BLACK);
-        showText("Press 'Y' to Play", 400, 400, Color.BLACK);
-        showText("Press 'N' to Quit", 600, 600, Color.BLACK);
-        addObject(menu, 1, 200);
-        addObject(exit, 1000, 200);
-        // ^^ need coordinates for the title screen text.
+        setBackground("images/Title.png");
+        addObject(menu, 900, 400);
+        
+        addObject(exit, 1500, 400);
+        
+
     }
 
     public void act()

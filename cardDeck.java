@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * <pre>
  * Created: 4/8/2025 (DD/MM/YYYY)
- * This class handles all 52 cards. 
+ * This interface(?) handles all 52 cards. 
  * This means it will: 
  * -create a deck
  * -shuffle the deck
@@ -11,6 +11,7 @@ import java.util.*;
  * -put cards into the deck
  * -draw a random card from the deck
  * The draw will be in a FILO (First in last out) system.
+ * This class DOES NOT HANDLE IMAGES
  * </pre>
  */
 
