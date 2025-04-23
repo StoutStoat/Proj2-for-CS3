@@ -6,6 +6,7 @@ public class LoseScreen extends World{
     public LoseScreen() {
         // you lose!!!!
 	setBackground("images/ExampleGameOver.png");
+	//this puts time between showing game over and changing to the options
 	try{
 		Thread.sleep(4000);
 	} catch (InterruptedException e){
