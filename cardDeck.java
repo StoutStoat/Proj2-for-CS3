@@ -39,10 +39,10 @@ public class cardDeck
 
     // Method to create a random deck of 15 cards
     public void createDeck() {
-        Random random = new Random();
+    	Random random = new Random();
         for (int i = 0; i < 15; i++) {
             // Randomly select a card (allowing duplicates)
-            String randomCard = cards.get(Math.random() * cards.size());
+        	String randomCard = cards.get(random.nextInt(cards.size()));
             deck.push(randomCard); // Add to the stack
         }
     }
