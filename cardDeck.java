@@ -19,55 +19,45 @@ public class cardDeck
 {
 	
 	//Every card has 3 properties. Number, Suit, and the Image
-	//A listmap will be used. Keys will be suits and values will be numbers.
+	//A list will be used.
+	private List<String> cards;
+    private Stack<String> deck;
 	
-	
-    public cardDeck()
-    {
+    // Constructor
+    public cardDeck() {
+        cards = new ArrayList<>();
+        // Initialize the card list with all cards in a standard deck
+        String[] suits = {"S", "C", "H", "D"}; // S=Spades, C=Clubs, H=Hearts, D=Diamonds
+        for (String suit : suits) {
+            for (int i = 1; i <= 13; i++) { // Cards from 1 to 13
+                cards.add(suit + i); // Example: S1, C13, etc.
+            }
+        }
+        deck = new Stack<>(); // Initialize the deck
+    }
 
+    // Method to create a random deck of 15 cards
+    public void createDeck() {
+        Random random = new Random();
+        for (int i = 0; i < 15; i++) {
+            // Randomly select a card (allowing duplicates)
+            String randomCard = cards.get(Math.random() * cards.size());
+            deck.push(randomCard); // Add to the stack
+        }
+    }
+
+    // Method to draw the top card from the deck
+    public String draw() {
+        if (!deck.isEmpty()) {
+            return deck.pop(); // Remove and return the top card
+        } else {
+            throw new IllegalStateException("The deck is empty!");
+        }
+    }
+
+    public static void main(String[] args) {
+        cardDeck cardDeck = new cardDeck(); // Initialize the cardDeck
+        cardDeck.createDeck(); // Create a random deck
     }
     
-    /**
-     * Creates a new deck and shuffle it. 
-     */
-    public void createDeck()
-    {
-    	
-    	shuffle();
-    }
-    
-    /**
-     * Pulls a random card from the deck. 
-     * It will never return cards that have already been pulled.
-     */
-    public void randomCardFromDeck() 
-    {
-    	
-    }
-    
-    /**
-     * Will shuffle the deck. 
-     * This will not return drawn cards into the deck. 
-     */
-    public void shuffle()
-    {
-    	
-    }
-    
-    /**
-     * Will draw the top card from the deck and return it. 
-     * This also means it will remove said-card from the deck.
-     */
-    public void draw()
-    {
-    	
-    }
-    
-    /**
-     * Will put any card back in a desired spot in the deck. 
-     * Will not put in duplicate cards. 
-     * Will likely not be implemented in-game.
-     */
-    public void cutDeck()
-    {}
 }
