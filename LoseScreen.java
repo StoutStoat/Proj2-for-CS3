@@ -1,19 +1,24 @@
 import mayflower.*;
 
 public class LoseScreen extends World{
-	MouseInfo minfo = Mayflower.getMouseInfo();
+	MenuButton menu = new MenuButton();
+	ExitGameButton exit = new ExitGameButton();
     public LoseScreen() {
         // you lose!!!!
     	setBackground("images/ExampleGameOver.png");
-        showText("You Lose!", 300, 150, Color.WHITE);
-        showText("Retry? [1]", 300, 200, Color.WHITE);
-        showText("Main Menu [2]", 300, 250, Color.WHITE);
-
+    	addObject(menu, 100, 100);
+    	addObject(exit, 200, 200);
     }
 
-    public void act() {
-        
-            new MenuButton();    
-        
+    public void act() 
+    {
+    	if (Mayflower.mousePressed(menu))
+    	{
+    		Mayflower.setWorld(new titleScreen());
+    	}
+    	if (Mayflower.mousePressed(exit))
+    	{
+    		Mayflower.exit();
+    	}
     }
 }
