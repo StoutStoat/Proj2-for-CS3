@@ -11,6 +11,7 @@ public class gameBoard extends World
 	HitButton hit = new HitButton();
 	StandButton stand = new StandButton();
 	DeckButton deck = new DeckButton();
+	Card card = new Card();
     public gameBoard()
     {
         setBackground("images/background.jpeg");
@@ -32,6 +33,7 @@ public class gameBoard extends World
 		if (Mayflower.mousePressed(hit))
 		{
 			Mayflower.playSound("sounds/Hit.wav");
+			addObject(card, 100, 100);
 		}
 		if (Mayflower.mousePressed(stand))
 		{

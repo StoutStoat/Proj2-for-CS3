@@ -2,14 +2,17 @@ import mayflower.*;
 import java.util.List;
 import java.util.Stack;
 import java.util.ArrayList;
+import java.util.Map;
 
 public class CardDeckTest<K, V> implements CardDeckManager<K, V>
 {	
 	//Deck list.
 	List<CardDeckManager.Node<K, V>> list;
+	List<String> pile;
 	public CardDeckTest()
 	{
 		list = new ArrayList<CardDeckManager.Node<K, V>>();
+		createDeck();
 	}
 	
 	public boolean containsCard(Object suit, Object number)
@@ -31,68 +34,61 @@ public class CardDeckTest<K, V> implements CardDeckManager<K, V>
 		return false;
 	}
 	
-	//UNFINISHED
+	/**
+	 * Creates a new deck of course.
+	 */
 	public List<String> createDeck()
 	{
-		for(int s = 0; s < 3; s++)
+		list = new ArrayList<CardDeckManager.Node<K, V>>();
+		pile = new ArrayList<String>();
+		for (int s = 0; s < 3; s++)
 		{
+			List<String> listKey = new ArrayList<String>();
+
 			for(int n = 1; n < 14; n++)
 			{
+				if(s == 0)
+					listKey.add("C" + n);
+				if(s == 1)
+					listKey.add("D" + n);
+				if(s == 2)
+					listKey.add("S" + n);
+				if(s == 3)
+					listKey.add("H" + n);
 				
+				pile.add(listKey.get(n));
+
 			}
 		}
-		return null;
+		
+		return pile;
 	}
 	
 	//UNFINISHED
 	public String draw()
 	{
-		
-		String returnVar = discard();
-		return returnVar;
+		return null;
 	}
 
 	//UNFINISHED
 	//Requires a key and a value to remove specific card.
-	public V discard(Object key, Object number)
-	{
-		for(CardDeckManager.Node<K, V> node : list)
-		{
-			if (node.getKey().equals(key))
-			{
-				for (int i = 0; i < 13; i++)
-				{
-					if (i == (Integer)number)
-					{
-						/*
-						 * {A, H, S, C}
-						 * [1 [1 [1 [1
-						 *  2  2  2  2
-						 *  3  3  3  3
-						 *  4  4  4  4
-						 *  5] 5] 5] 5]
-						 */
-						//segregate suits. 
-						//Find Value (list).
-						//remove unwanted item from list.
-					}
-				}
-			}
-		}
-		return null;
-	}
-	
-	public V getNumber(Object key)
-	{
-		for(CardDeckManager.Node<K, V> node : list)
-		{
-			if (node.getKey().equals(key))
-			{
-				return node.getValue();
-			}
-		}
-		return null;
-	}
+//	public V discard(K key, V number)
+//	{
+//
+//		return null;
+//	}
+//	
+//	public V getNumber(Object key)
+//	{
+//		for(CardDeckManager.Node<K, V> node : list)
+//		{
+//			if (node.getKey().equals(key))
+//			{
+//				return node.getValue();
+//			}
+//		}
+//		return null;
+//	}
 	
 	public List<String> remainingCards()
 	{

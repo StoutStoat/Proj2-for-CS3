@@ -8,7 +8,7 @@ import mayflower.*;
 public class ExitGameButton extends Actor{
 	public ExitGameButton()
 	{
-		setImage("images/2.png");
+		setImage("images/quit.png");
 		
 	}
 	public void act() 

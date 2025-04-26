@@ -41,12 +41,15 @@ public interface CardDeckManager<K, V>{
 	/**
 	 * @return Discarded Card
 	 */
-	public V discard(Object key, Object number);
-	
+//	public V discard(K key, V number);
+//	
 	//********************************************************************************************
 	//********************************************************************************************
 	//This section was imported from lab 17 at the bottom of the Map interface.
-    class Node<K, V>
+	//********************************************************************************************
+    //********************************************************************************************
+	
+	class Node<K, V>
     {
         private K key;
         private V value;
