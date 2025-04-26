@@ -8,7 +8,7 @@ import mayflower.*;
 public class QuitGame extends Actor{
 	public QuitGame()
 	{
-		setImage("images/9.png");
+		setImage("images/QuitButton.png");
 	}
 	public void act() 
 	{

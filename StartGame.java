@@ -8,7 +8,7 @@ import mayflower.*;
 public class StartGame extends Actor{
 	public StartGame()
 	{
-		setImage("images/1.png");
+		setImage("images/Start.png");
 	}
 	public void act() 
 	{

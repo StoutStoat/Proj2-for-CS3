@@ -8,7 +8,7 @@ import mayflower.*;
 public class MenuButton extends Actor{
 	public MenuButton()
 	{
-		setImage("images/1.png");
+		setImage("images/Menu.png");
 	}
 	public void act() 
 	{
