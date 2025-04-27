@@ -6,8 +6,8 @@ public class LoseScreen extends World{
     public LoseScreen() {
         // you lose!!!!
     	setBackground("images/ExampleGameOver.png");
-    	addObject(menu, 100, 100);
-    	addObject(exit, 200, 200);
+    	addObject(menu, 400, 700);
+    	addObject(exit, 1200, 700);
     	Mayflower.playMusic("sounds/Lost.wav");
     }
 

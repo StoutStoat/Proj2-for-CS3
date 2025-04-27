@@ -11,6 +11,12 @@ public class gameBoard extends World
 	HitButton hit = new HitButton();
 	StandButton stand = new StandButton();
 	DeckButton deck = new DeckButton();
+	
+	
+	//If over 21, lose.
+	public static int total = 0;
+	int toBeat = (int) ((Math.random() * 5) + 18 - 5);
+	int defX = 0;
 	Card card = new Card();
     public gameBoard()
     {
@@ -19,11 +25,15 @@ public class gameBoard extends World
         addObject(stand, 1400, 100);
         addObject(hit, 100, 100);
         addObject(deck, 500, 500);
+        showText("Beat " + toBeat + " to win!", 1000, 1000);
+        showText("Total: " + total, 700, 1000);
         
+        total = 0;
     }
 
     public void act()
     {
+    	
 		if (Mayflower.mousePressed(quit) == true)
 		{	
 			Mayflower.playSound("sounds/Lost.wav");
@@ -33,13 +43,36 @@ public class gameBoard extends World
 		if (Mayflower.mousePressed(hit))
 		{
 			Mayflower.playSound("sounds/Hit.wav");
-			addObject(card, 100, 100);
+			addObject(new Card(), defX, 1000);
+			defX += 30;
+			showText("Total: " + total, 700, 1000);
+			
 		}
+		
 		if (Mayflower.mousePressed(stand))
 		{
+			
 			Mayflower.playSound("sounds/Stand.wav");
+			if (total > 21 || total < toBeat)
+			{
+				Mayflower.playSound("sounds/Lost.wav");
+				Mayflower.setWorld(new LoseScreen());
+			}
+			else
+			{
+				Mayflower.playSound("sounds/Win.wav");
+				Mayflower.setWorld(new WinScreen());
+			}
 		}
         //get to the win and lose screens/ game over high score
         //gameplay will probably need
+		
+
     }
+    
+    public int getTotal()
+    {
+    	return total;
+    }
+    
 }

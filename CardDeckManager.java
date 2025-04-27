@@ -15,12 +15,12 @@ public interface CardDeckManager<K, V>{
 	 * @return A fresh deck with all 52 cards.
 	 * Expected : ("A1", "A2", "A3", "A4", "A5") etc...
 	 */
-	public List<String> createDeck();
+	public void createDeck();
 	
 	/**
 	 *@return True if contains a specified card.
 	 */
-	public boolean containsCard(Object suit, Object number);
+	public boolean containsCard(Integer suit, Integer number);
 	
 	/**
 	 * @return True if deck is empty.

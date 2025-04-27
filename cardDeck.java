@@ -37,7 +37,10 @@ public class cardDeck
         deck = new Stack<>(); // Initialize the deck
     }
 
-    // Method to create a random deck of 15 cards
+    
+    /**
+     * Creates a new deck.
+     */
     public void createDeck() {
     	Random random = new Random();
         for (int i = 0; i < 15; i++) {
@@ -46,8 +49,10 @@ public class cardDeck
             deck.push(randomCard); // Add to the stack
         }
     }
-
-    // Method to draw the top card from the deck
+    
+    /**
+     * @return What card is on the top of the deck and removes it.
+     */
     public String draw() {
         if (!deck.isEmpty()) {
             return deck.pop(); // Remove and return the top card
@@ -56,6 +61,7 @@ public class cardDeck
         }
     }
 
+    
     public static void main(String[] args) {
         cardDeck cardDeck = new cardDeck(); // Initialize the cardDeck
         cardDeck.createDeck(); // Create a random deck

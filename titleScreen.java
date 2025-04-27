@@ -29,6 +29,7 @@ public class titleScreen extends World
 		{	
 			Mayflower.playSound("sounds/Start.wav");
 			Mayflower.setWorld(new gameBoard());
+			gameBoard.total = 0;
 		}
         // this will exit the home screen and the entire game
 		if (Mayflower.mousePressed(exit) == true)
