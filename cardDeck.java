@@ -15,15 +15,15 @@ import java.util.*;
  * </pre>
  */
 
-//Interfaces from our labs will help here.
+//Interfaces from our labs will help here.S
 public class cardDeck
 {
-	
-	//Every card has 2 properties. Number, Suit
-	//A list will be used.
-	private static List<String> cards = new ArrayList<>();
-    private static Stack<String> deck = new Stack<>();
-	
+
+    //Every card has 2 properties. Number, Suit
+    //A list will be used.
+    private List<String> cards = new ArrayList<>();
+    private Stack<String> deck = new Stack<>();
+    String points = "";
     // Constructor
     public cardDeck() {
         cards = new ArrayList<>();
@@ -37,24 +37,22 @@ public class cardDeck
         deck = new Stack<>(); // Initialize the deck
     }
 
-    
     /**
      * Creates a new deck.
      */
-    //YO FIX THIS SHIT
-    public static void createDeck() {
-    	Random random = new Random();
-        for (int i = 0; i < 15; i++) {
+    public void createDeck() {
+        Random random = new Random();
+        for (int i = 0; i < 52; i++) {
             // Randomly select a card (allowing duplicates)
-        	String randomCard = cards.get((int) Math.random() * deck.size());
+            String randomCard = cards.get(Math.abs(random.nextInt(cards.size())));
             deck.push(randomCard); // Add to the stack
         }
     }
-    
+
     /**
      * @return What card is on the top of the deck and removes it.
      */
-    public static String draw() {
+    public String draw() {
         if (!deck.isEmpty()) {
             return deck.pop(); // Remove and return the top card
         } else {
@@ -63,26 +61,19 @@ public class cardDeck
     }
 
     /**
-     * @return Number or suit on the card on the top of the deck.
+     * @return Number on the card on the top of the deck.
      * 
      */
-    public static String getNumber()
-    {
-    	if (!cards.isEmpty())
-    		return cards.get(0).substring(1);
-    	return null;
-    }
-    
-    public static String getSuit()
-    {
-    	if (!cards.isEmpty())
-    		return cards.get(0).substring(0, 1);
-    	return null;
-    }
-    
-    public static void main(String[] args) {
-        cardDeck cardDeck = new cardDeck(); // Initialize the cardDeck
-        cardDeck.createDeck(); // Create a random deck
-    }
-    
+       public String getNumber()
+       {
+           System.out.println(deck.get(deck.size()-1).substring(1));
+        
+        return deck.get(deck.size()-1).substring(1);
+        
+       }
+    // public static void main(String[] args) {
+        // cardDeck cardDeck = new cardDeck(); // Initialize the cardDeck
+        // cardDeck.createDeck(); // Create a random deck
+    // }
+
 }
