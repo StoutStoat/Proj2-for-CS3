@@ -23,7 +23,8 @@ public class gameBoard extends World
 	
     public gameBoard()
     {
-    	cardDeck.createDeck();
+    	total = 0;
+//    	cardDeck.createDeck();
         setBackground("images/background.jpeg");
         addObject(quit, 10, 10);
         addObject(stand, 1400, 100);
@@ -32,7 +33,7 @@ public class gameBoard extends World
         showText("Beat " + toBeat + " to win!", 1000, 1000);
         showText("Total: " + total, 700, 1000);
         showText("Win Streak : " + winCount, 100, 500);
-        total = 0;
+
     }
 
     public void act()
