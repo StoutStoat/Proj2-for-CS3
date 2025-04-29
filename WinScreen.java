@@ -8,6 +8,7 @@ public class WinScreen extends World{
 		setBackground("images/WinScreen.png");
 		addObject(menu, 1200, 400);
 		addObject(start, 500, 400);
+		gameBoard.winCount++;
 	}
 	
 	public void act()

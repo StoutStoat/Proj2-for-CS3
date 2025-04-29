@@ -15,11 +15,15 @@ public class gameBoard extends World
 	
 	//If over 21, lose.
 	public static int total = 0;
+	public static int winCount = 0;
 	int toBeat = (int) ((Math.random() * 5) + 18 - 5);
+	
+	//Initial position for the cards
 	int defX = 0;
-	Card card = new Card();
+	
     public gameBoard()
     {
+    	cardDeck.createDeck();
         setBackground("images/background.jpeg");
         addObject(quit, 10, 10);
         addObject(stand, 1400, 100);
@@ -27,7 +31,7 @@ public class gameBoard extends World
         addObject(deck, 500, 500);
         showText("Beat " + toBeat + " to win!", 1000, 1000);
         showText("Total: " + total, 700, 1000);
-        
+        showText("Win Streak : " + winCount, 100, 500);
         total = 0;
     }
 
