@@ -1,4 +1,6 @@
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.io.FileNotFoundException;
 import java.util.*;
 import java.io.FileWriter;
@@ -10,7 +12,7 @@ import java.io.IOException;
  * You get 1 point for every win.
  */
 public class LeaderBoard {
-    static String board = "";
+    static List<Integer> board = new ArrayList<>();
 
     public LeaderBoard()
     {   
@@ -32,25 +34,32 @@ public class LeaderBoard {
         }
     }
     /**
-     * 
-     * @return Self explanatory. Reads the file and returns whatever string is in there.
+     * Returns the highest recorded score.
+     * @return Self explanatory. Reads the file and returns whatever the highest number is in there.
      */
-    public static String returnBoard()
+    public static int returnBoard()
     {
         Scanner num = null;
+        int highest = Integer.MIN_VALUE;
         try
         {
             num = new Scanner(new File("saves/Saves.txt"));
-           do{
-                    board += num.nextLine() + ", ";
-            } while(num.nextLine() != null);
-            board = board.substring(0, board.length() -1);
+            do
+            {
+                board.add(Integer.valueOf(num.nextLine()));
+            } while(num.hasNextLine() == true);
+            for (int i = 0; i < board.size(); i++)
+            {
+                if (highest < (board.get(i)))
+                {
+                    highest = board.get(i);
+                }
+            }
         }
         catch(FileNotFoundException e)
         {
             e.printStackTrace();
         }
-        
-        return board;
+        return highest;
     }
 }

@@ -51,6 +51,7 @@ public class cardDeck
         }
     }
     /**
+     * Takes the the first card on the 'deck'. 
      * @Returns what card is on the top of the deck and removes it.
      */
     public String draw() {

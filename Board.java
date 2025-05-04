@@ -6,12 +6,12 @@ import mayflower.*;
 public class Board extends World
 {
     MenuButton menu = new MenuButton();
-    String returnBoard = LeaderBoard.returnBoard();
+    int returnBoard = LeaderBoard.returnBoard();
     public Board()
     {
         setBackground("images/background.jpeg");
         addObject(menu, 100, 100);
-        showText("Last Game's Score : " + returnBoard, 1000, 700);
+        showText("Highest Score : " + returnBoard, 1000, 700);
     }
     public void act()
     {   
