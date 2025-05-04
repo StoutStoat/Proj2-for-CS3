@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * <pre>
  * Created: 4/8/2025 (DD/MM/YYYY)
- * This interface(?) handles all 52 cards. 
+ * This class handles all 52 cards. 
  * This means it will: 
  * -create a deck
  * -shuffle the deck
@@ -18,13 +18,16 @@ import java.util.*;
 //Interfaces from our labs will help here.S
 public class cardDeck
 {
-
     //Every card has 2 properties. Number, Suit
     //A list will be used.
     private List<String> cards = new ArrayList<>();
     private Stack<String> deck = new Stack<>();
     String points = "";
-    // Constructor
+    
+    /**
+     * Constructor. Automatically creates a deck and all the cards. 
+     * The deck is empty, so createDeck() will have to manually be called. 
+     */
     public cardDeck() {
         cards = new ArrayList<>();
         // Initialize the card list with all cards in a standard deck
@@ -36,7 +39,6 @@ public class cardDeck
         }
         deck = new Stack<>(); // Initialize the deck
     }
-
     /**
      * Creates a new deck.
      */
@@ -48,28 +50,26 @@ public class cardDeck
             deck.push(randomCard); // Add to the stack
         }
     }
-
     /**
-     * @return What card is on the top of the deck and removes it.
+     * @Returns what card is on the top of the deck and removes it.
      */
     public String draw() {
         if (!deck.isEmpty()) {
+            points = deck.get(deck.size()-1);
             return deck.pop(); // Remove and return the top card
         } else {
             throw new IllegalStateException("The deck is empty!");
         }
     }
-
     /**
      * @return Number on the card on the top of the deck.
      * 
      */
        public String getNumber()
        {
-           System.out.println(deck.get(deck.size()-1).substring(1));
+        System.out.println(points);
         
-        return deck.get(deck.size()-1).substring(1);
-        
+        return deck.get(deck.size() - 1).substring(1);
        }
     // public static void main(String[] args) {
         // cardDeck cardDeck = new cardDeck(); // Initialize the cardDeck
